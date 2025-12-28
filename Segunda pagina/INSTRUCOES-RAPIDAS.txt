@@ -1,0 +1,101 @@
+═══════════════════════════════════════════════════════════════
+  BURNEX30 - INSTRUÇÕES RÁPIDAS DE IMPLEMENTAÇÃO
+═══════════════════════════════════════════════════════════════
+
+📦 ARQUIVOS INCLUÍDOS:
+  ✅ index.html (página completa)
+  ✅ styles.css (estilos)
+  ✅ script.js (funcionalidades)
+  ✅ README.md (documentação completa)
+
+═══════════════════════════════════════════════════════════════
+  PASSO A PASSO RÁPIDO
+═══════════════════════════════════════════════════════════════
+
+1. WORDPRESS:
+   → Instalar plugin Elementor
+   → Criar nova página
+   → Escolher layout "Elementor Canvas"
+
+2. IMPORTAR CÓDIGO:
+   → Copiar HTML de cada seção do index.html
+   → Colar em widgets HTML no Elementor
+   → OU reconstruir com widgets do Elementor
+
+3. ADICIONAR IMAGENS:
+   → Upload em Mídia > Adicionar Nova
+   → Substituir placeholders no código:
+     * Bônus 4 e 5 (novos)
+     * Fotos dos depoimentos (3)
+     * Prints WhatsApp (já configurados)
+     * Antes/Depois (já configurados)
+
+4. CONFIGURAR LINKS:
+   → Todos os botões CTA → Link do checkout
+   → Testar cada botão
+
+5. TESTAR:
+   → Desktop, Tablet, Mobile
+   → Todos os navegadores
+   → Verificar carrosséis funcionando
+
+═══════════════════════════════════════════════════════════════
+  IMAGENS A ADICIONAR
+═══════════════════════════════════════════════════════════════
+
+BÔNUS NOVOS (2 imagens):
+  → BÔNUS 4: Estilo de Vida Keto
+    Placeholder: COLOQUE_AQUI_O_CAMINHO_DA_IMAGEM_BONUS_ESTILO_VIDA_KETO.jpg
+  
+  → BÔNUS 5: Checklist Nutricional
+    Placeholder: COLOQUE_AQUI_O_CAMINHO_DA_IMAGEM_BONUS_CHECKLIST_NUTRICIONAL.jpg
+
+DEPOIMENTOS (3 fotos):
+  → Substituir URLs do Unsplash por fotos reais dos alunos
+
+═══════════════════════════════════════════════════════════════
+  FUNCIONALIDADES PRINCIPAIS
+═══════════════════════════════════════════════════════════════
+
+✅ Carrossel WhatsApp:
+   - Autoplay 7 segundos
+   - Pausa ao clicar
+   - Imagens completas (sem cortes)
+   - Altura fixa: 600px (desktop)
+
+✅ Carrossel Antes/Depois:
+   - Autoplay 7 segundos
+   - Setas de navegação (desktop/tablet)
+   - Pausa ao clicar
+   - Imagens completas (sem cortes)
+   - Altura fixa: 650px (desktop)
+   - Layout estável (não pula)
+
+✅ Botões CTA:
+   - Sempre centralizados
+   - Responsivos em todas as telas
+   - Largura máxima 600px (desktop)
+
+✅ Depoimentos:
+   - Fotos centralizadas
+   - 3 cards com avatares
+   - Badge "Resultado Verificado"
+
+═══════════════════════════════════════════════════════════════
+  VALORES ATUALIZADOS
+═══════════════════════════════════════════════════════════════
+
+Bônus Total: R$ 225
+Programa Principal: R$ 297
+VALOR TOTAL: R$ 522
+PREÇO PROMOCIONAL: R$ 157
+
+═══════════════════════════════════════════════════════════════
+  SUPORTE
+═══════════════════════════════════════════════════════════════
+
+Para mais detalhes, consulte o arquivo README.md completo.
+
+═══════════════════════════════════════════════════════════════
+
+
