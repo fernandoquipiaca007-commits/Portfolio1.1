@@ -254,7 +254,7 @@
   const root = document.documentElement;
 
   /* Generic reveals */
-  const revealSel = ['.label', '.h2', '.manifesto__meta > div', '.stat', '.services__side .muted', '.svc', '.step', '.row', '.quotes__stage', '.xp__list li', '.xp__certs', '.faq__list details', '.cta__row', '.footer__row'];
+  const revealSel = ['.label', '.h2', '.manifesto__meta > div', '.stat', '.services__side .muted', '.svc', '.step', '.row', '.quotes__stage', '.vquote', '.xp__list li', '.xp__certs', '.faq__list details', '.cta__row', '.footer__row'];
   $$(revealSel.join(',')).forEach(el => {
     if (el.closest('.hero')) return;
     el.setAttribute('data-reveal', '');
@@ -296,4 +296,20 @@
   /* Recalc after fonts/images */
   addEventListener('load', () => ScrollTrigger.refresh());
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => ScrollTrigger.refresh());
+})();
+
+/* ===== Video testimonial ===== */
+(() => {
+  const box = document.querySelector('.vquote');
+  if (!box) return;
+  const video = box.querySelector('video');
+  const play = box.querySelector('.vquote__play');
+  video.controls = false;
+  play.addEventListener('click', () => {
+    box.classList.add('is-playing');
+    video.controls = true;
+    const p = video.play();
+    if (p && p.catch) p.catch(() => {});
+  });
+  video.addEventListener('ended', () => { box.classList.remove('is-playing'); video.controls = false; video.load(); });
 })();
