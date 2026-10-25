@@ -1,52 +1,35 @@
-# Portfólio Fernando Júnior - Full Stack Developer
+# Fernando Júnior — Portfólio
 
-## 🚀 Deploy no Vercel
+Portfólio de Fernando Júnior Grão Paim Quipiaca, engenheiro full stack sénior em Luanda, Angola.
 
-Este projeto está configurado para deploy no Vercel.
+**Online:** https://portfolio1-1-omega.vercel.app
 
-### Estrutura do Projeto
+## Stack
+
+Site estático, sem build: HTML, CSS e JavaScript.
+
+- **Three.js** — objeto 3D do hero (shader de ruído com iluminação)
+- **GSAP + ScrollTrigger** — animações de scroll, galeria horizontal fixada
+- **Lenis** — smooth scroll
+- Compatível com desktop, tablet e mobile; respeita `prefers-reduced-motion`; funciona sem WebGL.
+
+## Estrutura
 
 ```
-Portfólio/
-├── Segunda pagina/
-│   ├── index.html
-│   ├── styles.css
-│   ├── script.js
-│   └── ...
-├── vercel.json
-└── README.md
+index.html          conteúdo e SEO
+css/style.css       design system e layout
+js/main.js          interações e animações
+js/hero3d.js        cena 3D do hero
+assets/work/        capturas dos projetos (WebP)
+assets/og.jpg       imagem de partilha
 ```
 
-### Como fazer deploy
+## Correr localmente
 
-1. **Opção 1: Via CLI do Vercel**
-   ```bash
-   npm i -g vercel
-   cd "Segunda pagina"
-   vercel
-   ```
+```bash
+python -m http.server 5173
+```
 
-2. **Opção 2: Via GitHub**
-   - Conecte seu repositório ao Vercel
-   - Configure o "Root Directory" como `Segunda pagina`
-   - O Vercel detectará automaticamente e fará o deploy
+## Adicionar um projeto
 
-3. **Opção 3: Arrastar e soltar**
-   - Acesse vercel.com
-   - Arraste a pasta `Segunda pagina` para o dashboard
-   - O deploy será automático
-
-### Configuração do Vercel
-
-O arquivo `vercel.json` está configurado para:
-- Servir os arquivos da pasta `Segunda pagina`
-- Redirecionar todas as rotas para `index.html` (SPA)
-- Cachear assets estáticos (CSS, JS, imagens)
-
-### Solução de Problemas
-
-**Erro NOT_FOUND:**
-- Certifique-se de que o `vercel.json` está na raiz do repositório
-- Verifique se o "Root Directory" no Vercel está configurado como `Segunda pagina`
-- Ou mova os arquivos para a raiz do projeto
-
+Copie um `<article class="card">` dentro de `.work__track` em `index.html`, e coloque a captura em `assets/work/` (1200×750, WebP).

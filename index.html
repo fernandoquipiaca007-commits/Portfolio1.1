@@ -1,807 +1,476 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-AO">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Desenvolvedor Full Stack Sênior especializado em Python, JavaScript, React e Node.js. Ranking #1 em Angola. Veja meu portfólio com projetos reais e contrate agora!">
-    <meta name="keywords" content="desenvolvedor full stack, programador angola, python developer, javascript developer, react developer, portfolio desenvolvedor, sistemas web, automação">
-    <title>Fernando Júnior | Full Stack Developer #1 em Angola | Portfólio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2586875481919863"
-     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Fernando Júnior — Engenheiro Full Stack Sénior · Luanda, Angola</title>
+  <meta name="description" content="Engenheiro full stack sénior em Luanda. Construo plataformas SaaS, automações com IA e produtos digitais que geram receita. #1 em Angola na Workana. Fale comigo.">
+  <meta name="theme-color" content="#07070a">
+  <meta name="author" content="Fernando Júnior Grão Paim Quipiaca">
+  <link rel="canonical" href="https://portfolio1-1-omega.vercel.app/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fernando Júnior — Software que gera receita">
+  <meta property="og:description" content="SaaS, automação e IA, do primeiro commit ao primeiro cliente pagante. Engenheiro full stack sénior em Luanda.">
+  <meta property="og:image" content="https://portfolio1-1-omega.vercel.app/assets/og.jpg">
+  <meta property="og:url" content="https://portfolio1-1-omega.vercel.app/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Fernando Júnior Grão Paim Quipiaca",
+    "jobTitle": "Engenheiro de Software Full Stack Sénior",
+    "address": {"@type": "PostalAddress", "addressLocality": "Luanda", "addressCountry": "AO"},
+    "email": "mailto:fernandoquipiaca007@gmail.com",
+    "telephone": "+244957459336",
+    "url": "https://portfolio1-1-omega.vercel.app/",
+    "sameAs": ["https://github.com/fernandoquipiaca007-commits", "https://www.workana.com/freelancer/84dcfe7972237cb7ad32b4fb313682ca"]
+  }
+  </script>
 </head>
 <body>
+  <a class="skip" href="#main">Saltar para o conteúdo</a>
 
-    <!-- SEÇÃO 1: HERO/TOPO -->
-    <section class="hero" id="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <!-- HEADLINE PRINCIPAL -->
-            <h1 class="hero-headline">FERNANDO JÚNIOR<br>Full Stack Developer Sênior | #1 em Angola</h1>
-            
-            <!-- SUB-HEADLINE -->
-            <h2 class="hero-subheadline">Transformo ideias em sistemas digitais funcionais e escaláveis.<br>Especialista em Python, JavaScript, React, Node.js e WordPress.<br>Mais de 6 projetos entregues com excelência.</h2>
-            
-            <!-- BADGES DE CREDIBILIDADE -->
-            <div class="badges-trust">
-                <span class="badge">⭐ Ranking #1 em Angola</span>
-                <span class="badge">⭐ 152° no ranking global Workana</span>
-                <span class="badge">⭐ Nível SILVER</span>
-                <span class="badge">⭐ 6 projetos com 100% de satisfação</span>
-            </div>
-            
-            <!-- CTAs PRINCIPAIS -->
-            <div class="hero-ctas">
-                <a href="#projetos" class="btn-primary">Ver Meus Projetos</a>
-                <a href="#contato" class="btn-secondary">Contratar Agora</a>
-                <a href="mailto:fernandoquipiaca007@gmail.com?subject=Orçamento%20de%20Projeto&body=Olá%20Fernando,%0A%0AVisitei%20seu%20portfólio%20e%20gostaria%20de%20discutir%20um%20projeto." class="btn-email">✉️ Enviar E-mail</a>
-            </div>
+  <!-- PRELOADER -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__name">Fernando Júnior</span>
+      <span class="loader__count"><span data-count>0</span>%</span>
+    </div>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <!-- CURSOR -->
+  <div class="cursor" aria-hidden="true"><span class="cursor__label">Ver</span></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <a href="#top" class="nav__logo" aria-label="Início">
+      <span class="nav__mark">FJ</span><span class="nav__dot"></span>
+    </a>
+    <nav class="nav__links" aria-label="Principal">
+      <a href="#trabalho">Trabalho</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#processo">Processo</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+    <div class="nav__right">
+      <span class="nav__status"><i></i>Disponível · <span data-clock>--:--</span> Luanda</span>
+      <a href="#contacto" class="btn btn--sm btn--light" data-magnetic><span>Iniciar projeto</span></a>
+      <button class="nav__burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="menu" aria-hidden="true">
+    <nav class="menu__links">
+      <a href="#trabalho"><small>01</small>Trabalho</a>
+      <a href="#servicos"><small>02</small>Serviços</a>
+      <a href="#processo"><small>03</small>Processo</a>
+      <a href="#sobre"><small>04</small>Sobre</a>
+      <a href="#contacto"><small>05</small>Contacto</a>
+    </nav>
+    <div class="menu__foot">
+      <a href="https://wa.me/244957459336" target="_blank" rel="noopener">WhatsApp ↗</a>
+      <a href="mailto:fernandoquipiaca007@gmail.com">E-mail ↗</a>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="hero__glow" aria-hidden="true"></div>
+
+      <div class="hero__top wrap">
+        <p class="eyebrow"><span class="pulse"></span>Engenheiro Full Stack Sénior — Luanda, AO</p>
+        <p class="eyebrow eyebrow--right">Ranking #1 em Angola · Workana</p>
+      </div>
+
+      <h1 class="hero__title wrap" aria-label="Software que gera receita.">
+        <span class="line"><span class="line__in">Software</span></span>
+        <span class="line line--indent"><span class="line__in"><em>que gera</em></span></span>
+        <span class="line"><span class="line__in">receita<span class="accent">.</span></span></span>
+      </h1>
+
+      <div class="hero__bottom wrap">
+        <p class="hero__lead">Construo plataformas SaaS, automações com IA e produtos digitais para empresas que querem <strong>vender mais e operar com menos esforço</strong>, do primeiro commit ao primeiro cliente pagante.</p>
+        <div class="hero__cta">
+          <a href="#trabalho" class="btn btn--accent" data-magnetic><span>Ver projetos</span><i class="btn__arrow">↘</i></a>
+          <a href="https://wa.me/244957459336?text=Ol%C3%A1%20Fernando%2C%20vi%20o%20seu%20portf%C3%B3lio%20e%20quero%20falar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="btn btn--ghost" data-magnetic><span>Falar no WhatsApp</span></a>
         </div>
+        <div class="hero__scroll" aria-hidden="true"><span>Scroll</span><i></i></div>
+      </div>
     </section>
 
-    <!-- SEÇÃO 2: SOBRE MIM -->
-    <section class="about-section">
-        <div class="about-content">
-            <h2 class="section-title">QUEM SOU EU</h2>
-            <div class="about-text">
-                <p>Sou Desenvolvedor Sênior Full Stack, especializado em criar <strong>sistemas digitais, automações e soluções personalizadas</strong> que geram resultados reais para negócios.</p>
-                <p>Combino tecnologia, processos eficientes e inteligência artificial para entregar projetos completos, do planejamento à entrega final, sempre priorizando <strong>eficiência, escalabilidade e qualidade técnica</strong>.</p>
-                <p>Tenho sólida experiência em <strong>Python, JavaScript, HTML, CSS, React.js, Node.js e WordPress</strong>, desenvolvendo:</p>
-                <ul class="about-list">
-                    <li>Sistemas personalizados e automações</li>
-                    <li>Integrações e APIs</li>
-                    <li>Painéis administrativos</li>
-                    <li>Soluções de e-commerce completas</li>
-                    <li>Aplicativos desktop e mobile</li>
-                </ul>
-                <p>Além da área técnica, possuo experiência em <strong>escrita técnica, tradução profissional</strong> (português, inglês e espanhol) e <strong>SEO</strong>, atuando em projetos que unem tecnologia e conteúdo.</p>
-                <div class="about-values">
-                    <h3>Trabalho com:</h3>
-                    <ul class="values-list">
-                        <li>✓ Processos claros e comunicação objetiva</li>
-                        <li>✓ Cumprimento rigoroso de prazos</li>
-                        <li>✓ Soluções que economizam tempo e reduzem custos</li>
-                        <li>✓ Código limpo, documentado e fácil de manter</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="section-cta-wrapper">
-                <a href="#stack" class="btn-cta-section">Conhecer Minha Stack →</a>
-            </div>
+    <!-- MARQUEE -->
+    <section class="marquee" aria-label="Tecnologias">
+      <div class="marquee__row" data-dir="1">
+        <div class="marquee__track">
+          <span>TypeScript</span><b>✦</b><span>React</span><b>✦</b><span>Next.js</span><b>✦</b><span>Node.js</span><b>✦</b><span>Supabase</span><b>✦</b><span>PostgreSQL</span><b>✦</b><span>Stripe</span><b>✦</b><span>Python</span><b>✦</b><span>FastAPI</span><b>✦</b>
         </div>
+      </div>
+      <div class="marquee__row marquee__row--outline" data-dir="-1">
+        <div class="marquee__track">
+          <span>Agentes de IA</span><b>✦</b><span>WhatsApp API</span><b>✦</b><span>Automação</span><b>✦</b><span>Docker</span><b>✦</b><span>PWA</span><b>✦</b><span>Java · Spring</span><b>✦</b><span>Redis</span><b>✦</b><span>Vercel</span><b>✦</b>
+        </div>
+      </div>
     </section>
 
-    <!-- SEÇÃO 3: STACK TECNOLÓGICA -->
-    <section class="stack-section" id="stack">
-        <div class="stack-content">
-            <h2 class="section-title">TECNOLOGIAS QUE DOMINO</h2>
-            <div class="stack-grid">
-                <div class="stack-category">
-                    <h3>Linguagens</h3>
-                    <div class="tech-grid">
-                        <div class="tech-card">
-                            <div class="tech-icon">JS</div>
-                            <h4>JavaScript</h4>
-                            <p>3-5 anos | 8 projetos</p>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-icon">PY</div>
-                            <h4>Python</h4>
-                            <p>3-5 anos</p>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-icon">HTML</div>
-                            <h4>HTML5</h4>
-                            <p>3-5 anos | 5 projetos</p>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-icon">CSS</div>
-                            <h4>CSS3</h4>
-                            <p>3-5 anos</p>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-icon">PHP</div>
-                            <h4>PHP</h4>
-                            <p>3-5 anos | 1 projeto</p>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-icon">J</div>
-                            <h4>Java</h4>
-                            <p>3-5 anos | 1 projeto</p>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-icon">C#</div>
-                            <h4>C#</h4>
-                            <p>3-5 anos</p>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-icon">C++</div>
-                            <h4>C++</h4>
-                            <p>3-5 anos</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="stack-category">
-                    <h3>Frameworks & Bibliotecas</h3>
-                    <div class="tech-grid">
-                        <div class="tech-card">
-                            <div class="tech-icon">⚛️</div>
-                            <h4>React.js</h4>
-                            <p>3-5 anos</p>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-icon">🟢</div>
-                            <h4>Node.js</h4>
-                            <p>3-5 anos</p>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-icon">WP</div>
-                            <h4>WordPress</h4>
-                            <p>1-3 anos</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="stack-category">
-                    <h3>Banco de Dados</h3>
-                    <div class="tech-grid">
-                        <div class="tech-card">
-                            <div class="tech-icon">🗄️</div>
-                            <h4>MySQL</h4>
-                            <p>3-5 anos</p>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-icon">🐘</div>
-                            <h4>PostgreSQL</h4>
-                            <p>Experiência</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="stack-category">
-                    <h3>E-commerce</h3>
-                    <div class="tech-grid">
-                        <div class="tech-card">
-                            <div class="tech-icon">🛒</div>
-                            <h4>Shopify</h4>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-icon">WC</div>
-                            <h4>WooCommerce</h4>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-icon">PS</div>
-                            <h4>PrestaShop</h4>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-icon">M</div>
-                            <h4>Magento</h4>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-icon">VT</div>
-                            <h4>VTEX</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="stack-category">
-                    <h3>Ferramentas</h3>
-                    <div class="tech-grid">
-                        <div class="tech-card">
-                            <div class="tech-icon">📊</div>
-                            <h4>Power BI</h4>
-                            <p>3-5 anos</p>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-icon">🎬</div>
-                            <h4>Adobe Premiere</h4>
-                            <p>3-5 anos</p>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-icon">🔀</div>
-                            <h4>Git/GitHub</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="stack-category">
-                    <h3>Idiomas</h3>
-                    <div class="tech-grid">
-                        <div class="tech-card">
-                            <div class="tech-icon">🇵🇹</div>
-                            <h4>Português</h4>
-                            <p>Nativo</p>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-icon">🇬🇧</div>
-                            <h4>Inglês</h4>
-                            <p>Avançado</p>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-icon">🇪🇸</div>
-                            <h4>Espanhol</h4>
-                            <p>Avançado</p>
-                        </div>
-                        <div class="tech-card">
-                            <div class="tech-icon">🇫🇷</div>
-                            <h4>Francês</h4>
-                            <p>Avançado</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="section-cta-wrapper">
-                <a href="#projetos" class="btn-cta-section">Ver Projetos Reais →</a>
-            </div>
-        </div>
+    <!-- MANIFESTO -->
+    <section class="manifesto wrap" id="sobre">
+      <p class="label"><span>(01)</span> Abordagem</p>
+      <p class="manifesto__text" data-words>Não escrevo código para encher ecrãs. Desenho sistemas que cobram assinaturas, automatizam equipas inteiras e aguentam escala, com a mesma exigência técnica das melhores empresas de produto do mundo, construídos a partir de Angola.</p>
+      <div class="manifesto__meta">
+        <div><span class="mono">Base</span><p>Luanda, Angola. Clientes em Angola, Brasil, Portugal e EUA.</p></div>
+        <div><span class="mono">Idiomas</span><p>Português, Inglês, Espanhol e Francês.</p></div>
+        <div><span class="mono">Ecossistema</span><p>Fundador da CodeEngine. Incubado na Asoft. Parceiro Intetch.</p></div>
+      </div>
     </section>
 
-    <!-- SEÇÃO 4: PROJETOS EM DESTAQUE -->
-    <section class="projects-section" id="projetos">
-        <div class="projects-content">
-            <h2 class="section-title">PROJETOS QUE TRANSFORMARAM NEGÓCIOS</h2>
-            <p class="projects-subtitle">Soluções reais, resultados comprovados</p>
-            <div class="projects-carousel-wrapper">
-                <button class="carousel-arrow carousel-prev" id="projectsPrev">‹</button>
-                <div class="projects-carousel" id="projectsCarousel">
-                    <!-- PROJETO 1 -->
-                    <div class="project-slide active">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80" alt="J&P Desenvolvimento" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>J&P Desenvolvimento</h3>
-                            <p class="project-description">Desenvolvimento de sistema web personalizado para gestão empresarial, com interface moderna e responsiva.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                            </div>
-                            <div class="project-meta">
-                                <span>⏱️ Duração: 2 meses</span>
-                                <span>✅ Resultado: Sistema em produção, cliente 100% satisfeito</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- PROJETO 2 -->
-                    <div class="project-slide">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=1200&q=80" alt="WordPress Site Builder Automatizado" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>WordPress Site Builder Automatizado</h3>
-                            <p class="project-description">Sistema automatizado capaz de criar mais de 300 sites WordPress em 48 horas, com templates personalizados e configuração automática.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">WordPress</span>
-                                <span class="tech-tag">Automation</span>
-                            </div>
-                            <div class="project-meta">
-                                <span>⏱️ Duração: 3 meses</span>
-                                <span>✅ Resultado: 300+ sites criados automaticamente, economia de 95% de tempo</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- PROJETO 3 -->
-                    <div class="project-slide">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=1200&q=80" alt="SocialBoom" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>SocialBoom – App Desktop para Agendamento de Reels</h3>
-                            <p class="project-description">Aplicativo desktop para agendamento e automação de publicação de Reels e Stories no Instagram e Facebook.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">React.js</span>
-                                <span class="tech-tag">API Instagram</span>
-                            </div>
-                            <div class="project-meta">
-                                <span>⏱️ Duração: 4 meses</span>
-                                <span>✅ Resultado: App funcional com mais de 100 usuários ativos</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- PROJETO 4 -->
-                    <div class="project-slide">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=1200&q=80" alt="WhatsBoom" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>WhatsBoom – Automação de WhatsApp Business</h3>
-                            <p class="project-description">Sistema completo de automação para WhatsApp Business, incluindo versão desktop e web, com chatbot inteligente e CRM integrado.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">PostgreSQL</span>
-                                <span class="tech-tag">WhatsApp API</span>
-                            </div>
-                            <div class="project-meta">
-                                <span>⏱️ Duração: 5 meses</span>
-                                <span>✅ Resultado: Sistema em uso por empresas, automatizando mais de 1000 conversas/dia</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- PROJETO 5 -->
-                    <div class="project-slide">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80" alt="Sistema de Gestão Empresarial" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>Sistema de Gestão Empresarial Personalizado</h3>
-                            <p class="project-description">ERP completo desenvolvido do zero, com módulos de vendas, estoque, financeiro e relatórios.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">MySQL</span>
-                            </div>
-                            <div class="project-meta">
-                                <span>⏱️ Duração: 6 meses</span>
-                                <span>✅ Resultado: Sistema rodando em produção, gerenciando operações de empresa com 50+ funcionários</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- PROJETO 6 -->
-                    <div class="project-slide">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=1200&q=80" alt="Kiss Lorant Beauty" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>Loja Virtual Shopify Premium – Kiss Lorant Beauty</h3>
-                            <p class="project-description">Desenvolvimento de e-commerce premium e totalmente personalizado para marca de cosméticos, com design exclusivo e integrações de pagamento.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Shopify</span>
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">JavaScript</span>
-                            </div>
-                            <div class="project-meta">
-                                <span>⏱️ Duração: 2 meses</span>
-                                <span>✅ Resultado: Loja online gerando vendas, design responsivo e alta conversão</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- PROJETO 7 -->
-                    <div class="project-slide">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&q=80" alt="App Android" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>Aplicativo Android com Sistema de Assinaturas</h3>
-                            <p class="project-description">App Android com sistema completo de assinaturas, pagamentos integrados via Google Play e gestão de usuários.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Java</span>
-                                <span class="tech-tag">Android SDK</span>
-                                <span class="tech-tag">Google Play Billing API</span>
-                            </div>
-                            <div class="project-meta">
-                                <span>⏱️ Duração: 3 meses</span>
-                                <span>✅ Resultado: App publicado na Google Play com sistema de monetização funcional</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- PROJETO 8 -->
-                    <div class="project-slide">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1200&q=80" alt="Plataforma Imobiliária" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>Plataforma Imobiliária com Sistema de Gestão</h3>
-                            <p class="project-description">Portal imobiliário completo com busca avançada, filtros, mapa interativo e painel administrativo para corretores.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Google Maps API</span>
-                            </div>
-                            <div class="project-meta">
-                                <span>⏱️ Duração: 4 meses</span>
-                                <span>✅ Resultado: Plataforma com 500+ imóveis cadastrados, sistema de gestão em uso</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- PROJETO 9 -->
-                    <div class="project-slide">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=1200&q=80" alt="E-commerce WooCommerce" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>Sistema E-commerce WooCommerce Completo</h3>
-                            <p class="project-description">Loja virtual WordPress/WooCommerce com gestão de produtos, pedidos, pagamentos e integração com ERP.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">WordPress</span>
-                                <span class="tech-tag">WooCommerce</span>
-                                <span class="tech-tag">PHP</span>
-                                <span class="tech-tag">MySQL</span>
-                            </div>
-                            <div class="project-meta">
-                                <span>⏱️ Duração: 2 meses</span>
-                                <span>✅ Resultado: E-commerce funcional processando vendas, integrado com sistema de gestão</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- PROJETO 10 -->
-                    <div class="project-slide">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?w=1200&q=80" alt="Google reCAPTCHA" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>Implementação de Google reCAPTCHA v2</h3>
-                            <p class="project-description">Integração de sistema de segurança reCAPTCHA em website existente, protegendo formulários contra spam e bots.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">HTML</span>
-                                <span class="tech-tag">CSS</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">PHP</span>
-                            </div>
-                            <div class="project-meta">
-                                <span>⏱️ Duração: 1 semana</span>
-                                <span>✅ Resultado: Website protegido, redução de 100% de spam em formulários</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- PROJETO 11 -->
-                    <div class="project-slide">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&q=80" alt="Revisão de Textos" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>Revisão e Edição Profissional de Textos</h3>
-                            <p class="project-description">Serviço de revisão, edição e otimização de conteúdos técnicos e institucionais em português.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Escrita técnica</span>
-                                <span class="tech-tag">Revisão</span>
-                                <span class="tech-tag">Edição criativa</span>
-                            </div>
-                            <div class="project-meta">
-                                <span>⏱️ Duração: Projetos variados</span>
-                                <span>✅ Resultado: Textos profissionais entregues com alta qualidade linguística</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- PROJETO 12 -->
-                    <div class="project-slide">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8f2c293?w=1200&q=80" alt="SEO" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>Estratégias Avançadas de SEO</h3>
-                            <p class="project-description">Implementação de estratégias de SEO técnico e link building para posicionamento no Google.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">SEO</span>
-                                <span class="tech-tag">Link Building</span>
-                                <span class="tech-tag">Análise de dados</span>
-                            </div>
-                            <div class="project-meta">
-                                <span>⏱️ Duração: 3 meses (recorrente)</span>
-                                <span>✅ Resultado: Melhoria significativa no ranking orgânico dos clientes</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- PROJETO 13 -->
-                    <div class="project-slide">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80" alt="Tradução Técnica" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>Tradução Técnica EN-PT</h3>
-                            <p class="project-description">Tradução de material didático técnico de engenharia do inglês para português, mantendo precisão terminológica.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Tradução técnica</span>
-                                <span class="tech-tag">Escrita de artigos</span>
-                            </div>
-                            <div class="project-meta">
-                                <span>⏱️ Duração: 1 mês</span>
-                                <span>✅ Resultado: Material traduzido com alta qualidade técnica e linguística</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- PROJETO 14 -->
-                    <div class="project-slide">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=1200&q=80" alt="Correção de Bugs" loading="lazy">
-                        </div>
-                        <div class="project-info">
-                            <h3>Correção de Bugs e Testes de Qualidade</h3>
-                            <p class="project-description">Serviço especializado de identificação e correção de bugs, testes de qualidade e estabilização de sistemas web.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Software Testing</span>
-                            </div>
-                            <div class="project-meta">
-                                <span>⏱️ Duração: Projetos variados</span>
-                                <span>✅ Resultado: Sistemas estabilizados, bugs críticos corrigidos, qualidade garantida</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-arrow carousel-next" id="projectsNext">›</button>
-                <div class="projects-indicators" id="projectsIndicators">
-                    <span class="indicator active" data-slide="0"></span>
-                    <span class="indicator" data-slide="1"></span>
-                    <span class="indicator" data-slide="2"></span>
-                    <span class="indicator" data-slide="3"></span>
-                    <span class="indicator" data-slide="4"></span>
-                    <span class="indicator" data-slide="5"></span>
-                    <span class="indicator" data-slide="6"></span>
-                    <span class="indicator" data-slide="7"></span>
-                    <span class="indicator" data-slide="8"></span>
-                    <span class="indicator" data-slide="9"></span>
-                    <span class="indicator" data-slide="10"></span>
-                    <span class="indicator" data-slide="11"></span>
-                    <span class="indicator" data-slide="12"></span>
-                    <span class="indicator" data-slide="13"></span>
-                </div>
-            </div>
-            <div class="section-cta-wrapper">
-                <a href="#contato" class="btn-cta-section">Discutir Meu Projeto →</a>
-            </div>
-        </div>
+    <!-- STATS -->
+    <section class="stats wrap" aria-label="Números">
+      <div class="stat"><span class="stat__num"><span data-to="30">0</span>+</span><p>Produtos e sites lançados em produção</p></div>
+      <div class="stat"><span class="stat__num"><span data-to="5">0</span></span><p>Plataformas SaaS com faturação recorrente</p></div>
+      <div class="stat"><span class="stat__num"><span data-to="1000">0</span>+</span><p>Conversas/dia automatizadas no WhatsApp</p></div>
+      <div class="stat"><span class="stat__num">#<span data-to="1">0</span></span><p>Ranking em Angola · Top 152 global na Workana</p></div>
     </section>
 
-    <!-- SEÇÃO 5: DEPOIMENTOS -->
-    <section class="testimonials-section">
-        <div class="testimonials-content">
-            <h2 class="section-title">O QUE MEUS CLIENTES DIZEM</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"O Fernando é muito profissional, a qualidade do trabalho que me entregou é excepcional. Com certeza voltarei a fazer projetos com ele. Recomendo com certeza."</p>
-                    <p class="testimonial-author"><strong>Andre Godinho</strong><br>Projeto: Sistema de Assinatura Android com Google Pay</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Muito eficiente. Resolveu o problema rapidamente e com atenção aos detalhes. Profissional de confiança."</p>
-                    <p class="testimonial-author"><strong>Leonardo Vinicius</strong><br>Projeto: Implementação de Recaptcha V2</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"Excelente trabalho na criação da loja. Design impecável, funcionalidade perfeita e entrega antes do prazo. Superou minhas expectativas!"</p>
-                    <p class="testimonial-author"><strong>Cliente Confidencial</strong><br>Projeto: Loja Virtual Shopify Premium</p>
-                </div>
+    <!-- WORK -->
+    <section class="work" id="trabalho">
+      <div class="work__head wrap">
+        <p class="label"><span>(02)</span> Trabalho selecionado</p>
+        <h2 class="h2">Produtos reais, <em>em produção</em>, a faturar.</h2>
+      </div>
+      <div class="work__pin">
+        <div class="work__track">
+          <article class="card" data-tilt>
+            <a class="card__media" href="https://gestao-pro-saas.vercel.app" target="_blank" rel="noopener" data-cursor="Abrir">
+              <div class="frame"><div class="frame__bar"><i></i><i></i><i></i><span>gestao-pro-saas.vercel.app</span></div>
+                <img src="assets/work/gestao-pro.webp" alt="Ecrã da plataforma Gestão Pro" loading="lazy" width="1200" height="750"></div>
+            </a>
+            <div class="card__body">
+              <div class="card__meta"><span class="mono">01 — SaaS B2B</span><span class="mono">2026</span></div>
+              <h3 class="card__title">Gestão Pro</h3>
+              <p class="card__desc">Plataforma SaaS multi-tenant de gestão empresarial e financeira para agências, consultores e PMEs. Isolamento total de dados por cliente e cobrança recorrente automática.</p>
+              <ul class="card__wins"><li>20 tabelas com Row Level Security</li><li>Assinaturas Stripe + webhooks</li><li>Trial de 7 dias e papéis Owner/Admin</li></ul>
+              <div class="tags"><span>React</span><span>TypeScript</span><span>Supabase</span><span>Stripe</span></div>
             </div>
-            <div class="section-cta-wrapper">
-                <a href="#contato" class="btn-cta-section">Quero Resultados Assim →</a>
+          </article>
+
+          <article class="card" data-tilt>
+            <a class="card__media" href="https://gym-beryl-psi.vercel.app" target="_blank" rel="noopener" data-cursor="Abrir">
+              <div class="frame"><div class="frame__bar"><i></i><i></i><i></i><span>pulso · gestão de ginásios</span></div>
+                <img src="assets/work/pulso.webp" alt="Ecrã do Pulso, gestão de ginásios" loading="lazy" width="1200" height="750"></div>
+            </a>
+            <div class="card__body">
+              <div class="card__meta"><span class="mono">02 — SaaS Vertical</span><span class="mono">2026</span></div>
+              <h3 class="card__title">Pulso</h3>
+              <p class="card__desc">Sistema de gestão de ginásios com portal privado do aluno, feito para Angola e valores em Kz. Matrículas, mensalidades, presenças, treinos, vendas e auditoria num só lugar.</p>
+              <ul class="card__wins"><li>Convites QR de utilização única</li><li>Tempo real + PWA instalável</li><li>Assinatura mensal por ginásio</li></ul>
+              <div class="tags"><span>React</span><span>Supabase Realtime</span><span>Edge Functions</span><span>PWA</span></div>
             </div>
+          </article>
+
+          <article class="card" data-tilt>
+            <div class="card__media">
+              <div class="frame frame--code"><div class="frame__bar"><i></i><i></i><i></i><span>manager-learn / notas.ts</span></div>
+                <div class="codeart" aria-hidden="true">
+<pre><b>const</b> media = <u>modeloAngolano</u>({
+  MAC: <s>0.4</s>, NPP: <s>0.3</s>, NPT: <s>0.3</s>
+});
+<i>// sala e professor nunca em conflito</i>
+<b>await</b> turma.<u>agendar</u>({ sala, lotacao, horario });
+<b>await</b> push.<u>enviar</u>(aluno, <em>'Notas publicadas'</em>);</pre>
+                  <div class="codeart__chip">12 meses de financeiro · Excel · Push</div>
+                </div></div>
+            </div>
+            <div class="card__body">
+              <div class="card__meta"><span class="mono">03 — EdTech SaaS</span><span class="mono">2026</span></div>
+              <h3 class="card__title">Manager Learn</h3>
+              <p class="card__desc">Gestão de centros de formação (inglês, informática e mais) com vários centros isolados na mesma plataforma, portal do aluno e assinatura mensal.</p>
+              <ul class="card__wins"><li>Notas no modelo angolano MAC/NPP/NPT</li><li>Horários sem choque de sala/professor</li><li>Financeiro completo + web push</li></ul>
+              <div class="tags"><span>TypeScript</span><span>Supabase RLS</span><span>Web Push</span><span>PWA</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-tilt>
+            <a class="card__media" href="https://codeengine1.vercel.app" target="_blank" rel="noopener" data-cursor="Abrir">
+              <div class="frame"><div class="frame__bar"><i></i><i></i><i></i><span>codeengine learn</span></div>
+                <img src="assets/work/codeengine-learn.webp" alt="Loja de cursos CodeEngine Learn" loading="lazy" width="1200" height="750"></div>
+            </a>
+            <div class="card__body">
+              <div class="card__meta"><span class="mono">04 — Ecossistema EdTech</span><span class="mono">2026</span></div>
+              <h3 class="card__title">CodeEngine Learn</h3>
+              <p class="card__desc">Ecossistema completo de venda de cursos: loja para o aluno, painel administrativo e API própria. Três aplicações a partilhar a mesma base de dados.</p>
+              <ul class="card__wins"><li>Loja + Admin + API separados</li><li>Base PostgreSQL com Docker</li><li>IA integrada (Gemini)</li></ul>
+              <div class="tags"><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Docker</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-tilt>
+            <div class="card__media">
+              <div class="frame frame--voice"><div class="frame__bar"><i></i><i></i><i></i><span>meu-funcionario · agente de voz</span></div>
+                <div class="voiceart" aria-hidden="true">
+                  <div class="voiceart__wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                  <p class="voiceart__line">“Bom dia, Clínica Vida. Já marquei a sua consulta para quinta às 10h.”</p>
+                  <div class="voiceart__chips"><span>Hermes · cérebro</span><span>OmniVoice · voz</span><span>24/7</span></div>
+                </div></div>
+            </div>
+            <div class="card__body">
+              <div class="card__meta"><span class="mono">05 — IA · SaaS</span><span class="mono">2026</span></div>
+              <h3 class="card__title">Meu Funcionário</h3>
+              <p class="card__desc">Plataforma SaaS para empresas criarem funcionários virtuais com voz: atendem, agendam e respondem clientes 24 horas por dia, em vários canais.</p>
+              <ul class="card__wins"><li>Motor cognitivo + síntese de voz</li><li>Painel multi-empresa</li><li>Arquitetura em containers</li></ul>
+              <div class="tags"><span>Next.js</span><span>FastAPI</span><span>PostgreSQL</span><span>Redis</span><span>Docker</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-tilt>
+            <a class="card__media" href="https://github.com/Senior0007/brain-hub" target="_blank" rel="noopener" data-cursor="Código">
+              <div class="frame frame--code"><div class="frame__bar"><i></i><i></i><i></i><span>brain-hub / action.json</span></div>
+                <div class="codeart codeart--json" aria-hidden="true">
+<pre>{
+  <u>"agent"</u>: <em>"coder"</em>,
+  <u>"target"</u>: <em>"executor"</em>,
+  <u>"action"</u>: <em>"run_command"</em>,
+  <u>"input"</u>: { <u>"command"</u>: <em>"npm run deploy"</em> },
+  <u>"priority"</u>: <em>"high"</em>
+}</pre>
+                  <div class="codeart__flow"><span>Decide</span><i>→</i><span>Orquestra</span><i>→</i><span>Executa</span></div>
+                </div></div>
+            </a>
+            <div class="card__body">
+              <div class="card__meta"><span class="mono">06 — Agentes de IA</span><span class="mono">2026</span></div>
+              <h3 class="card__title">Brain Hub</h3>
+              <p class="card__desc">Sistema de orquestração multi-agente: um modelo decide, o hub coordena e um executor age de verdade no sistema operativo, com fila, feedback e segurança.</p>
+              <ul class="card__wins"><li>Decisão em JSON estruturado</li><li>Whitelist e confirmação de ações críticas</li><li>Loop de feedback com estado global</li></ul>
+              <div class="tags"><span>TypeScript</span><span>LLMs</span><span>Node.js</span><span>Open source</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-tilt>
+            <a class="card__media" href="https://quipiacagestao.vercel.app" target="_blank" rel="noopener" data-cursor="Abrir">
+              <div class="frame"><div class="frame__bar"><i></i><i></i><i></i><span>gestão digital pro</span></div>
+                <img src="assets/work/gestao-financeira.webp" alt="Painel da Gestão Digital Pro" loading="lazy" width="1200" height="750"></div>
+            </a>
+            <div class="card__body">
+              <div class="card__meta"><span class="mono">07 — FinTech</span><span class="mono">2026</span></div>
+              <h3 class="card__title">Gestão Digital Pro</h3>
+              <p class="card__desc">Gestão financeira, projetos e agenda em várias moedas (Kz, R$, US$, €) com câmbio em tempo real e lembretes por notificação no navegador.</p>
+              <ul class="card__wins"><li>Multi-moeda com câmbio automático</li><li>Notificações Web Push nativas</li><li>CRUD completo em 8 entidades</li></ul>
+              <div class="tags"><span>React 19</span><span>Tailwind v4</span><span>Supabase</span><span>Recharts</span></div>
+            </div>
+          </article>
+
+          <article class="card" data-tilt>
+            <a class="card__media" href="https://landing-page-raquel-rinaldi.vercel.app" target="_blank" rel="noopener" data-cursor="Abrir">
+              <div class="frame frame--stack">
+                <img src="assets/work/raquel.webp" alt="Landing page Raquel Rinaldi Advocacia" loading="lazy" width="1200" height="750">
+                <img src="assets/work/julianna.webp" alt="" loading="lazy" width="1200" height="750">
+                <img src="assets/work/carola.webp" alt="" loading="lazy" width="1200" height="750">
+              </div>
+            </a>
+            <div class="card__body">
+              <div class="card__meta"><span class="mono">08 — Aquisição de clientes</span><span class="mono">2025–26</span></div>
+              <h3 class="card__title">Legal Growth</h3>
+              <p class="card__desc">Série de landing pages de captação para escritórios de advocacia no Brasil: copy persuasiva, carregamento instantâneo e contacto direto por WhatsApp.</p>
+              <ul class="card__wins"><li>7+ escritórios atendidos</li><li>Funil focado em marcação de consultas</li><li>Sistema reutilizável, entrega em dias</li></ul>
+              <div class="tags"><span>React</span><span>TypeScript</span><span>SEO</span><span>Copywriting</span></div>
+            </div>
+          </article>
+
+          <article class="card card--end">
+            <p class="mono">Próximo projeto</p>
+            <h3 class="card__title">O seu<br><em>pode ser</em><br>o próximo.</h3>
+            <a href="#contacto" class="btn btn--accent" data-magnetic><span>Começar agora</span><i class="btn__arrow">→</i></a>
+          </article>
         </div>
+        <div class="work__progress" aria-hidden="true"><span></span></div>
+      </div>
     </section>
 
-    <!-- SEÇÃO 6: EXPERIÊNCIA PROFISSIONAL -->
-    <section class="experience-section">
-        <div class="experience-content">
-            <h2 class="section-title">EXPERIÊNCIA PROFISSIONAL</h2>
-            <div class="experience-timeline">
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3>Programador Freelancer</h3>
-                        <span class="experience-location">Angola | 2022 — Presente</span>
-                    </div>
-                    <p class="experience-description">Atuação independente no desenvolvimento de sistemas e sites personalizados, com foco em Python, JavaScript, HTML, CSS e Java. Responsável por todas as fases do processo: análise de requisitos, codificação, testes e entrega final.</p>
-                    <div class="experience-achievements">
-                        <h4>Principais realizações:</h4>
-                        <ul>
-                            <li>Desenvolvimento de 6 projetos profissionais entregues com 100% de satisfação</li>
-                            <li>Criação de interfaces funcionais e responsivas</li>
-                            <li>Ranking #1 em Angola na Workana</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3>Incubado na Asoft</h3>
-                        <span class="experience-location">Luanda, Angola | 2024 — Presente</span>
-                    </div>
-                    <p class="experience-description">Participação ativa numa incubadora de startups tecnológicas, com foco em inovação digital e desenvolvimento de projetos empreendedores.</p>
-                    <div class="experience-achievements">
-                        <h4>Atividades:</h4>
-                        <ul>
-                            <li>Colaboração em projetos de software e aplicativos</li>
-                            <li>Aprimoramento de práticas de gestão de projetos e metodologias ágeis</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3>Vinculado à Intetch</h3>
-                        <span class="experience-location">Angola | 2024 — Presente</span>
-                    </div>
-                    <p class="experience-description">Atuação em parceria com a Intetch, empresa voltada para criação de serviços e aplicativos digitais.</p>
-                    <div class="experience-achievements">
-                        <h4>Atividades:</h4>
-                        <ul>
-                            <li>Desenvolvimento e suporte técnico em aplicações web e móveis</li>
-                            <li>Participação no planejamento e execução de novos produtos digitais</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="section-cta-wrapper">
-                <a href="#contato" class="btn-cta-section">Contratar Profissional Experiente →</a>
-            </div>
-        </div>
+    <!-- SERVICES -->
+    <section class="services wrap" id="servicos">
+      <div class="services__side">
+        <p class="label"><span>(03)</span> Serviços</p>
+        <h2 class="h2">O que posso <em>construir</em> para si.</h2>
+        <p class="muted">Cada entrega é pensada para um resultado de negócio: mais vendas, menos trabalho manual, receita recorrente.</p>
+      </div>
+      <ol class="services__list">
+        <li class="svc">
+          <span class="svc__n mono">01</span>
+          <div><h3>Plataformas SaaS</h3><p>Produtos multi-tenant com autenticação, papéis, assinaturas (Stripe ou transferência em Kz), painel de administração e base de dados segura com RLS.</p>
+          <div class="tags"><span>MVP em semanas</span><span>Faturação recorrente</span></div></div>
+        </li>
+        <li class="svc">
+          <span class="svc__n mono">02</span>
+          <div><h3>Automação &amp; Agentes de IA</h3><p>Bots de WhatsApp, atendimento com voz, agentes que executam tarefas e integrações que eliminam horas de trabalho repetitivo por semana.</p>
+          <div class="tags"><span>WhatsApp API</span><span>LLMs</span><span>Workflows</span></div></div>
+        </li>
+        <li class="svc">
+          <span class="svc__n mono">03</span>
+          <div><h3>Sites e landing pages que convertem</h3><p>Design premium, copy persuasiva e performance máxima. Cada página tem um objetivo: transformar visitantes em contactos e clientes.</p>
+          <div class="tags"><span>SEO técnico</span><span>Core Web Vitals</span></div></div>
+        </li>
+        <li class="svc">
+          <span class="svc__n mono">04</span>
+          <div><h3>E-commerce &amp; sistemas à medida</h3><p>Lojas Shopify, WooCommerce ou próprias, ERPs, apps Android e integrações de pagamento, prontos para operar no dia do lançamento.</p>
+          <div class="tags"><span>Pagamentos</span><span>APIs</span><span>Mobile</span></div></div>
+        </li>
+      </ol>
     </section>
 
-    <!-- SEÇÃO 7: CERTIFICAÇÕES -->
-    <section class="certifications-section">
-        <div class="certifications-content">
-            <h2 class="section-title">CERTIFICAÇÕES E TESTES APROVADOS</h2>
-            <div class="certifications-grid">
-                <div class="certification-card">
-                    <div class="cert-icon">✅</div>
-                    <h3>ASP .NET WebForms Avançado</h3>
-                </div>
-                <div class="certification-card">
-                    <div class="cert-icon">✅</div>
-                    <h3>Android Avançado</h3>
-                </div>
-                <div class="certification-card">
-                    <div class="cert-icon">✅</div>
-                    <h3>C# Intermediário</h3>
-                </div>
-                <div class="certification-card">
-                    <div class="cert-icon">✅</div>
-                    <h3>HTML 5 Intermediário</h3>
-                </div>
-                <div class="certification-card">
-                    <div class="cert-icon">✅</div>
-                    <h3>Javascript Avançado</h3>
-                </div>
-                <div class="certification-card">
-                    <div class="cert-icon">✅</div>
-                    <h3>Teste de Inglês</h3>
-                </div>
-            </div>
+    <!-- PROCESS -->
+    <section class="process" id="processo">
+      <div class="wrap">
+        <p class="label"><span>(04)</span> Processo</p>
+        <h2 class="h2 process__title">Do briefing ao lançamento,<br><em>sem surpresas.</em></h2>
+        <div class="process__grid">
+          <div class="process__line" aria-hidden="true"><span></span></div>
+          <div class="step"><span class="step__n">01</span><h3>Diagnóstico</h3><p>Chamada para entender o negócio, o cliente e onde está o dinheiro. Saio com objetivos claros e mensuráveis.</p><span class="mono">Dia 1</span></div>
+          <div class="step"><span class="step__n">02</span><h3>Proposta &amp; arquitetura</h3><p>Escopo, prazo e valor fechados por escrito. Arquitetura escolhida para escalar sem reescrever.</p><span class="mono">48 horas</span></div>
+          <div class="step"><span class="step__n">03</span><h3>Construção em sprints</h3><p>Entregas semanais num link de teste. Vê o produto a crescer e decide comigo, sem caixas negras.</p><span class="mono">Semanas</span></div>
+          <div class="step"><span class="step__n">04</span><h3>Lançamento &amp; suporte</h3><p>Deploy, domínio, monitorização e formação da equipa. Continuo disponível para evoluir o produto.</p><span class="mono">Contínuo</span></div>
         </div>
+      </div>
     </section>
 
-    <!-- SEÇÃO 8: POR QUE ME CONTRATAR -->
-    <section class="benefits-section">
-        <div class="benefits-content">
-            <h2 class="section-title">POR QUE TRABALHAR COMIGO?</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <div class="benefit-image" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80');"></div>
-                    <h3>Entregas no Prazo</h3>
-                    <p>Cumpro rigorosamente os prazos acordados. Seu projeto será entregue quando prometido, sem atrasos ou desculpas.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-image" style="background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80');"></div>
-                    <h3>Código Limpo e Documentado</h3>
-                    <p>Desenvolvo com as melhores práticas do mercado. Código organizado, comentado e fácil de manter por qualquer desenvolvedor.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-image" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80');"></div>
-                    <h3>Comunicação Clara</h3>
-                    <p>Mantenho você informado em todas as etapas. Relatórios regulares, respostas rápidas e total transparência no processo.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-image" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80');"></div>
-                    <h3>Suporte Pós-Entrega</h3>
-                    <p>Não abandono o projeto após a entrega. Ofereço suporte para ajustes e dúvidas, garantindo sua satisfação total.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80');"></div>
-                    <h3>Experiência Comprovada</h3>
-                    <p>Ranking #1 em Angola e Top 152 global na Workana. Histórico de 6 projetos entregues com 100% de satisfação.</p>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-image" style="background-image: url('https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&q=80');"></div>
-                    <h3>Custo-Benefício Imbatível</h3>
-                    <p>Qualidade internacional com preço competitivo. USD 10/hora para desenvolvimento de altíssimo nível.</p>
-                </div>
-            </div>
-        </div>
+    <!-- ARCHIVE -->
+    <section class="archive wrap" aria-labelledby="arq">
+      <div class="archive__head">
+        <p class="label"><span>(05)</span> Arquivo</p>
+        <h2 class="h2" id="arq">Mais trabalho <em>entregue.</em></h2>
+      </div>
+      <div class="archive__list" role="list">
+        <a role="listitem" class="row" href="https://code-engine-tau.vercel.app" target="_blank" rel="noopener" data-img="assets/work/codeengine.webp"><span class="row__t">CodeEngine</span><span class="row__c">Site institucional · software house</span><span class="row__y mono">2026</span><i>↗</i></a>
+        <a role="listitem" class="row" href="https://servicos-rouge.vercel.app" target="_blank" rel="noopener" data-img="assets/work/servicos.webp"><span class="row__t">CodeEngine Growth</span><span class="row__c">Landing de tráfego pago e funis</span><span class="row__y mono">2026</span><i>↗</i></a>
+        <a role="listitem" class="row" href="https://ruaxa.vercel.app" target="_blank" rel="noopener" data-img="assets/work/ruaxa.webp"><span class="row__t">RUAXA</span><span class="row__c">E-commerce de moda</span><span class="row__y mono">2026</span><i>↗</i></a>
+        <a role="listitem" class="row" href="https://marta-acess-rios-de-beleza.vercel.app" target="_blank" rel="noopener" data-img="assets/work/marta.webp"><span class="row__t">Marta Acessórios</span><span class="row__c">Loja online de beleza</span><span class="row__y mono">2026</span><i>↗</i></a>
+        <a role="listitem" class="row" href="https://afonso-manuel-comercia.vercel.app" target="_blank" rel="noopener" data-img="assets/work/afonso.webp"><span class="row__t">Afonso Manuel Comercial</span><span class="row__c">Site comercial · Angola</span><span class="row__y mono">2026</span><i>↗</i></a>
+        <div role="listitem" class="row"><span class="row__t">Domestic Tours Angola</span><span class="row__c">Turismo · site bilingue com pré-reserva</span><span class="row__y mono">2026</span><i>·</i></div>
+        <div role="listitem" class="row"><span class="row__t">WhatsBoom</span><span class="row__c">Automação WhatsApp Business + CRM · 1000+ conversas/dia</span><span class="row__y mono">2025</span><i>·</i></div>
+        <div role="listitem" class="row"><span class="row__t">WP Site Builder</span><span class="row__c">300+ sites WordPress gerados em 48 h</span><span class="row__y mono">2025</span><i>·</i></div>
+        <div role="listitem" class="row"><span class="row__t">SocialBoom</span><span class="row__c">App desktop de agendamento de Reels · 100+ utilizadores</span><span class="row__y mono">2025</span><i>·</i></div>
+        <div role="listitem" class="row"><span class="row__t">ERP Empresarial</span><span class="row__c">Vendas, stock e financeiro · empresa com 50+ funcionários</span><span class="row__y mono">2024</span><i>·</i></div>
+        <div role="listitem" class="row"><span class="row__t">App Android de Assinaturas</span><span class="row__c">Google Play Billing · publicado</span><span class="row__y mono">2024</span><i>·</i></div>
+        <div role="listitem" class="row"><span class="row__t">Kiss Lorant Beauty</span><span class="row__c">Loja Shopify premium</span><span class="row__y mono">2024</span><i>·</i></div>
+        <div role="listitem" class="row"><span class="row__t">Portal Imobiliário</span><span class="row__c">500+ imóveis · mapa interativo · painel de corretores</span><span class="row__y mono">2024</span><i>·</i></div>
+      </div>
+      <div class="archive__preview" aria-hidden="true"><img alt=""></div>
     </section>
 
-    <!-- SEÇÃO 9: FAQ -->
-    <section class="faq-section">
-        <div class="faq-content">
-            <h2 class="section-title">PERGUNTAS FREQUENTES</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Quanto tempo leva para desenvolver um projeto?</span>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Depende da complexidade. Projetos simples levam 1-2 semanas. Sistemas complexos podem levar 2-4 meses. Avalio cada caso individualmente.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Você oferece suporte após a entrega?</span>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sim! Ofereço suporte pós-entrega para ajustes e dúvidas. Também disponibilizo contratos de manutenção contínua.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Trabalha com projetos internacionais?</span>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sim! Atendo clientes do Brasil, Portugal, Angola e outros países. Domino inglês, espanhol e francês avançados.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Aceita projetos de que tamanho?</span>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Desde pequenas correções até sistemas empresariais complexos. Se envolve código, posso ajudar!</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Como é o processo de trabalho?</span>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>1. Reunião inicial para entender o projeto<br>2. Proposta detalhada com prazo e valor<br>3. Desenvolvimento com atualizações regulares<br>4. Testes e ajustes<br>5. Entrega e treinamento (se necessário)</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Quais formas de pagamento aceita?</span>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Trabalho principalmente pela Workana (seguro para ambas as partes). Também aceito outras plataformas de freelance ou transferências diretas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!-- TESTIMONIALS -->
+    <section class="quotes wrap" aria-label="Depoimentos">
+      <p class="label"><span>(06)</span> Clientes</p>
+      <div class="quotes__stage">
+        <figure class="quote is-active">
+          <blockquote>“O Fernando é muito profissional, a qualidade do trabalho que me entregou é <em>excecional</em>. Com certeza voltarei a fazer projetos com ele.”</blockquote>
+          <figcaption><strong>André Godinho</strong><span>App Android com sistema de assinaturas</span></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>“Muito eficiente. Resolveu o problema rapidamente e com <em>atenção aos detalhes</em>. Profissional de confiança.”</blockquote>
+          <figcaption><strong>Leonardo Vinicius</strong><span>Segurança e reCAPTCHA v2</span></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>“Design impecável, funcionalidade perfeita e entrega <em>antes do prazo</em>. Superou as minhas expectativas.”</blockquote>
+          <figcaption><strong>Cliente e-commerce</strong><span>Loja Shopify premium</span></figcaption>
+        </figure>
+      </div>
+      <div class="quotes__nav">
+        <button class="qbtn" data-q="prev" aria-label="Depoimento anterior">←</button>
+        <span class="mono"><span data-qi>01</span> / 03</span>
+        <button class="qbtn" data-q="next" aria-label="Próximo depoimento">→</button>
+        <span class="quotes__stars" aria-label="5 estrelas">★★★★★ <span class="mono">100% de satisfação na Workana</span></span>
+      </div>
     </section>
 
-    <!-- SEÇÃO 10: CTA FINAL -->
-    <section class="final-cta-section" id="contato">
-        <div class="final-cta-content">
-            <h2 class="section-title">PRONTO PARA TRANSFORMAR SUA IDEIA EM REALIDADE?</h2>
-            <p class="cta-intro">Trabalho com processos claros, entregas pontuais e código de alta qualidade.</p>
-            <p class="cta-intro">Se você precisa de:</p>
-            <ul class="cta-list">
-                <li>✓ Sistema web ou aplicativo personalizado</li>
-                <li>✓ Automação de processos</li>
-                <li>✓ E-commerce profissional</li>
-                <li>✓ Integração de APIs</li>
-                <li>✓ Consultoria técnica</li>
-            </ul>
-            <p class="cta-intro"><strong>Entre em contato agora e vamos conversar sobre seu projeto!</strong></p>
-            <div class="cta-buttons">
-                <a href="https://www.workana.com/freelancer/84dcfe7972237cb7ad32b4fb313682ca?utm_source=share-profile&utm_medium=email&utm_campaign=share-2025-12-26" class="btn-primary btn-large" target="_blank" rel="noopener noreferrer">Contratar no Workana</a>
-                <a href="https://wa.me/244957459336?text=Olá%20Fernando,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto" class="btn-secondary btn-large" target="_blank" rel="noopener noreferrer">💬 WhatsApp: +244 957 459 336</a>
-                <a href="mailto:fernandoquipiaca007@gmail.com?subject=Orçamento%20de%20Projeto&body=Olá%20Fernando,%0A%0AVisitei%20seu%20portfólio%20e%20gostaria%20de%20discutir%20um%20projeto." class="btn-email btn-large" target="_blank">✉️ Enviar E-mail</a>
-            </div>
-            <div class="final-badges">
-                <span class="final-badge">💼 6 projetos entregues</span>
-                <span class="final-badge">⭐ 100% de satisfação</span>
-                <span class="final-badge">🏆 #1 em Angola</span>
-                <span class="final-badge">🌍 Top 152 global</span>
-            </div>
+    <!-- EXPERIENCE -->
+    <section class="xp wrap" aria-labelledby="xp">
+      <div>
+        <p class="label"><span>(07)</span> Percurso</p>
+        <h2 class="h2" id="xp">Experiência &amp; <em>credenciais.</em></h2>
+      </div>
+      <div class="xp__cols">
+        <ul class="xp__list">
+          <li><span class="mono">2025 — Hoje</span><h3>Fundador · CodeEngine</h3><p>Software house focada em SaaS, automação e IA. Produtos próprios e projetos para clientes em 4 países.</p></li>
+          <li><span class="mono">2022 — Hoje</span><h3>Engenheiro Full Stack Freelancer</h3><p>#1 em Angola e Top 152 global na Workana, nível Silver, 100% de clientes satisfeitos.</p></li>
+          <li><span class="mono">2024 — Hoje</span><h3>Incubado · Asoft, Luanda</h3><p>Programa de startups tecnológicas: produto, gestão ágil e inovação digital.</p></li>
+          <li><span class="mono">2024 — Hoje</span><h3>Parceiro · Intetch</h3><p>Desenvolvimento e suporte de aplicações web e móveis e planeamento de novos produtos.</p></li>
+        </ul>
+        <div class="xp__certs">
+          <p class="mono">Testes aprovados</p>
+          <ul><li>JavaScript Avançado</li><li>Android Avançado</li><li>ASP.NET WebForms Avançado</li><li>C# Intermédio</li><li>HTML5 Intermédio</li><li>Inglês profissional</li></ul>
         </div>
+      </div>
     </section>
 
-    <!-- RODAPÉ -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-info">
-                <h3>Fernando Júnior Grão Paim Quipiaca</h3>
-                <p>Full Stack Developer Sênior</p>
-                <p>📍 Angola</p>
-                <p>📞 <a href="tel:+244957459336" style="color: #00CC66; text-decoration: none;">+244 957 459 336</a></p>
-                <p>✉️ <a href="mailto:fernandoquipiaca007@gmail.com" style="color: #00CC66; text-decoration: none;">fernandoquipiaca007@gmail.com</a></p>
-                <p>💰 USD 10.00/hora</p>
-            </div>
-            <div class="footer-links">
-                <a href="#hero">Início</a>
-                <span>•</span>
-                <a href="#projetos">Projetos</a>
-                <span>•</span>
-                <a href="#contato">Contato</a>
-            </div>
-            <p class="footer-copyright">&copy; 2025 Fernando Júnior - Todos os direitos reservados</p>
-        </div>
-    </footer>
+    <!-- FAQ -->
+    <section class="faq wrap" aria-labelledby="faq">
+      <div>
+        <p class="label"><span>(08)</span> FAQ</p>
+        <h2 class="h2" id="faq">Perguntas <em>frequentes.</em></h2>
+      </div>
+      <div class="faq__list">
+        <details><summary>Quanto tempo demora um projeto?<i></i></summary><p>Uma landing page fica pronta em poucos dias. Um MVP de SaaS demora entre 3 e 8 semanas. Sistemas maiores são divididos em fases com entregas semanais, para começar a usar (e a faturar) mais cedo.</p></details>
+        <details><summary>Quanto custa?<i></i></summary><p>Depende do escopo. Depois da chamada inicial recebe uma proposta fechada com prazo e valor, sem custos escondidos. Trabalho com pagamento por fases.</p></details>
+        <details><summary>Trabalha com clientes fora de Angola?<i></i></summary><p>Sim. Atendo clientes em Angola, Brasil, Portugal e EUA, em português, inglês, espanhol ou francês, totalmente remoto.</p></details>
+        <details><summary>O código fica meu?<i></i></summary><p>Sim. No fim recebe o repositório, o acesso às contas (Vercel, Supabase, domínio) e a documentação. Sem dependência de mim para continuar.</p></details>
+        <details><summary>Dá suporte depois da entrega?<i></i></summary><p>Sim. Há um período de ajustes incluído e planos de manutenção e evolução contínua para quem quer continuar a crescer o produto.</p></details>
+        <details><summary>Como pago?<i></i></summary><p>Por transferência bancária (Kz ou moeda estrangeira), pela Workana com pagamento protegido, ou outra plataforma combinada.</p></details>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- CTA -->
+    <section class="cta" id="contacto">
+      <div class="cta__glow" aria-hidden="true"></div>
+      <div class="wrap">
+        <p class="label"><span>(09)</span> Contacto</p>
+        <h2 class="cta__title"><span class="line"><span class="line__in">Vamos construir</span></span><span class="line"><span class="line__in"><em>o próximo</em> grande</span></span><span class="line"><span class="line__in">produto<span class="accent">.</span></span></span></h2>
+        <div class="cta__row">
+          <p class="muted">Conte-me a ideia. Respondo em menos de 24 horas com os próximos passos.</p>
+          <div class="cta__btns">
+            <a href="https://wa.me/244957459336?text=Ol%C3%A1%20Fernando%2C%20vi%20o%20seu%20portf%C3%B3lio%20e%20quero%20falar%20sobre%20um%20projeto." target="_blank" rel="noopener" class="btn btn--accent btn--lg" data-magnetic><span>WhatsApp · +244 957 459 336</span><i class="btn__arrow">↗</i></a>
+            <a href="mailto:fernandoquipiaca007@gmail.com?subject=Novo%20projeto" class="btn btn--ghost btn--lg" data-magnetic><span>fernandoquipiaca007@gmail.com</span></a>
+            <a href="https://www.workana.com/freelancer/84dcfe7972237cb7ad32b4fb313682ca" target="_blank" rel="noopener" class="btn btn--ghost btn--lg" data-magnetic><span>Contratar na Workana</span><i class="btn__arrow">↗</i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <div class="footer__big" aria-hidden="true">Fernando Júnior</div>
+    <div class="footer__row">
+      <span>© <span data-year>2026</span> Fernando Júnior Grão Paim Quipiaca</span>
+      <span>Luanda, Angola · <span data-clock>--:--</span></span>
+      <nav class="footer__links" aria-label="Redes">
+        <a href="https://github.com/fernandoquipiaca007-commits" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.workana.com/freelancer/84dcfe7972237cb7ad32b4fb313682ca" target="_blank" rel="noopener">Workana</a>
+        <a href="https://wa.me/244957459336" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="#top">Topo ↑</a>
+      </nav>
+    </div>
+  </footer>
+
+  <a class="fab" href="https://wa.me/244957459336" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.5c.1.2 1.6 2.5 4 3.5 1.5.6 2 .7 2.8.6.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.5-.4Z"/></svg>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script type="module" src="js/hero3d.js"></script>
 </body>
 </html>
-
