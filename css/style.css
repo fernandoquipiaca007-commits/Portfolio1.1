@@ -300,7 +300,7 @@ a.row:hover i{color:var(--accent);transform:translate(3px,-3px)}
 
 /* ===== Footer ===== */
 .footer{padding-top:40px;padding-bottom:28px;border-top:1px solid var(--line);overflow:hidden}
-.footer__big{font-size:clamp(3rem,13.6vw,17rem);font-weight:600;letter-spacing:-.075em;line-height:.8;white-space:nowrap;background:linear-gradient(180deg,var(--text) 30%,rgba(239,236,230,.05));-webkit-background-clip:text;background-clip:text;color:transparent;user-select:none}
+.footer__big{font-size:clamp(2.6rem,11.8vw,15rem);font-weight:600;letter-spacing:-.075em;line-height:.8;white-space:nowrap;background:linear-gradient(180deg,var(--text) 30%,rgba(239,236,230,.05));-webkit-background-clip:text;background-clip:text;color:transparent;user-select:none}
 .footer__row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:32px;padding-right:72px;font-size:.86rem;color:var(--muted)}
 .footer__links{display:flex;gap:20px;flex-wrap:wrap}
 .footer__links a:hover{color:var(--text)}
