@@ -1,5 +1,5 @@
 /* Hero 3D: liquid noise blob + particle field (Three.js) */
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
+let THREE;
 
 const canvas = document.querySelector('.hero__canvas');
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -79,7 +79,8 @@ function init() {
   try {
     renderer = new THREE.WebGLRenderer({ canvas, antialias: !small, alpha: true, powerPreference: 'high-performance' });
   } catch (e) { canvas.remove(); return; }
-  renderer.setPixelRatio(Math.min(devicePixelRatio, small ? 1.5 : 1.75));
+  renderer.setPixelRatio(Math.min(devicePixelRatio, small ? 1 : 1.5));
+  canvas.classList.add('is-on');
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(35, 1, 0.1, 100);
@@ -88,7 +89,7 @@ function init() {
   /* Blob */
   const uniforms = { uTime: { value: 0 }, uAmp: { value: 0.24 }, uMouse: { value: new THREE.Vector2() } };
   const blob = new THREE.Mesh(
-    new THREE.IcosahedronGeometry(1.55, small ? 48 : 96),
+    new THREE.IcosahedronGeometry(1.55, small ? 22 : 44),
     new THREE.ShaderMaterial({ vertexShader: VERT, fragmentShader: FRAG, uniforms })
   );
   const group = new THREE.Group();
@@ -104,7 +105,7 @@ function init() {
   group.add(ring);
 
   /* Particles */
-  const N = small ? 600 : 1400;
+  const N = small ? 380 : 1200;
   const pos = new Float32Array(N * 3);
   for (let i = 0; i < N; i++) {
     const r = 2.6 + Math.random() * 6;
@@ -139,7 +140,7 @@ function init() {
   addEventListener('scroll', readScroll, { passive: true });
 
   /* Intro scale */
-  let intro = 0;
+  let intro = document.documentElement.classList.contains('is-loaded') ? 0.0001 : 0;
   const introStart = () => { intro = 0.0001; };
   addEventListener('fj:intro', introStart);
   setTimeout(() => { if (!intro) intro = 0.0001; }, 3500);
@@ -149,10 +150,16 @@ function init() {
   new IntersectionObserver(([en]) => { visible = en.isIntersecting; }).observe(canvas);
 
   const clock = new THREE.Clock();
+  /* 30 fps on phones, full rate on desktop */
+  const minDt = small ? 1 / 30 : 0;
+  let acc = 0;
   const frame = () => {
     requestAnimationFrame(frame);
-    if (!visible) return;
-    const dt = Math.min(clock.getDelta(), 0.05);
+    if (!visible || document.hidden) return;
+    acc += clock.getDelta();
+    if (acc < minDt) return;
+    const dt = Math.min(acc, 0.1);
+    acc = 0;
     const t = clock.elapsedTime;
     if (intro > 0 && intro < 1) intro = Math.min(1, intro + dt * 0.7);
     const e = 1 - Math.pow(1 - intro, 4);
@@ -186,4 +193,27 @@ function init() {
   }
 }
 
-if (canvas) init();
+/* Load Three.js only after the page has loaded, so it never delays the first paint */
+const start = async () => {
+  try { THREE = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js'); }
+  catch (e) { canvas && canvas.remove(); return; }
+  init();
+};
+/* Phones: start on the first touch/scroll. Desktop: first mouse move, or 2.5 s after load. */
+let started = false;
+const go = () => {
+  if (started) return;
+  started = true;
+  ('requestIdleCallback' in window) ? requestIdleCallback(start, { timeout: 800 }) : setTimeout(start, 50);
+};
+const arm = () => {
+  ['pointerdown', 'touchstart', 'wheel', 'keydown', 'scroll'].forEach(e => addEventListener(e, go, { once: true, passive: true }));
+  if (!small) {
+    addEventListener('pointermove', go, { once: true, passive: true });
+    setTimeout(go, 2500);
+  }
+};
+if (canvas) {
+  if (document.readyState === 'complete') arm();
+  else addEventListener('load', arm, { once: true });
+}

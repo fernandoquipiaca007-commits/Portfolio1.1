@@ -2,7 +2,7 @@
 
 Portfólio de Fernando Júnior Grão Paim Quipiaca, engenheiro full stack sénior em Luanda, Angola.
 
-**Online:** https://portfolio1-1-omega.vercel.app
+**Online:** https://fernandojuniorgrao-omega.vercel.app
 
 ## Stack
 

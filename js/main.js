@@ -200,22 +200,28 @@
     lenis.stop();
   }
 
-  /* initial hidden states */
-  gsap.set('.hero .line__in', { yPercent: 110 });
-  gsap.set(['.hero__top', '.hero__bottom > *', '.nav'], { autoAlpha: 0, y: 24 });
-
-  /* Loader */
+  /* Intro runs in CSS (starts at first paint, never waits for scripts).
+     JS only drives the % counter and hands over to smooth scroll when it ends. */
   const count = $('[data-count]');
-  const bar = $('.loader__bar span');
-  const prog = { v: 0 };
-  const tl = gsap.timeline({ defaults: { ease: 'expo.out' } });
-  tl.to(prog, { v: 100, duration: 1.6, ease: 'power2.inOut', onUpdate: () => { count.textContent = Math.round(prog.v); bar.style.transform = `scaleX(${prog.v / 100})`; } })
-    .to('.loader__inner', { yPercent: -40, autoAlpha: 0, duration: .6, ease: 'power3.in' })
-    .to(loader, { clipPath: 'inset(0 0 100% 0)', duration: 1, ease: 'expo.inOut' }, '-=.15')
-    .add(() => { root.classList.add('is-loaded'); loader.remove(); window.__lenis && window.__lenis.start(); })
-    .to('.hero .line__in', { yPercent: 0, duration: 1.4, stagger: .12 }, '-=.55')
-    .to(['.nav', '.hero__top', '.hero__bottom > *'], { autoAlpha: 1, y: 0, duration: 1.1, stagger: .08 }, '-=1.1')
-    .add(() => window.dispatchEvent(new Event('fj:intro')), '-=1.4');
+  const seen = root.classList.contains('seen');
+  const INTRO_MS = seen ? 0 : 1300;
+  if (count && !seen) {
+    const t0 = performance.now();
+    const left = Math.max(INTRO_MS * 0.55 - t0, 120);
+    const tickCount = (t) => {
+      const p = Math.min((t - t0) / left, 1);
+      count.textContent = Math.round(p * 100);
+      if (p < 1) requestAnimationFrame(tickCount);
+    };
+    requestAnimationFrame(tickCount);
+  }
+  const finishIntro = () => {
+    root.classList.add('is-loaded');
+    if (loader) loader.remove();
+    if (window.__lenis) window.__lenis.start();
+    window.dispatchEvent(new Event('fj:intro'));
+  };
+  setTimeout(finishIntro, Math.max(INTRO_MS - performance.now(), 0));
 
   /* Hero parallax out */
   gsap.to('.hero__title', { yPercent: -18, opacity: .15, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
@@ -225,15 +231,35 @@
   $$('.marquee__row').forEach(row => {
     const track = $('.marquee__track', row);
     for (let i = 0; i < 3; i++) row.appendChild(track.cloneNode(true));
-    const tracks = $$('.marquee__track', row);
+    /* Compositor-driven loop (no per-frame style work); speed follows scroll velocity */
+    const inner = document.createElement('div');
+    inner.className = 'marquee__inner';
+    $$('.marquee__track', row).forEach(t => inner.appendChild(t));
+    row.appendChild(inner);
     const dir = +row.dataset.dir;
-    let x = 0;
+    let anim = null;
+    const build = () => {
+      const w = $('.marquee__track', inner).offsetWidth;
+      if (!w || !inner.animate) return;
+      const t = anim ? anim.currentTime : 0;
+      if (anim) anim.cancel();
+      const from = dir > 0 ? 0 : -w;
+      const to = dir > 0 ? -w : 0;
+      anim = inner.animate(
+        [{ transform: 'translate3d(' + from + 'px,0,0)' }, { transform: 'translate3d(' + to + 'px,0,0)' }],
+        { duration: w * 28, iterations: Infinity }
+      );
+      anim.currentTime = t || 0;
+    };
+    build();
+    addEventListener('resize', build);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(build);
+    let rate = 1;
     gsap.ticker.add(() => {
-      const w = tracks[0].offsetWidth; if (!w) return;
+      if (!anim) return;
       const v = Math.min(Math.abs(window.__scrollVel || 0), 60);
-      x -= (0.6 + v * 0.25) * dir;
-      if (x <= -w) x += w; if (x > 0) x -= w;
-      tracks.forEach(t => { t.style.transform = `translate3d(${x}px,0,0)`; });
+      rate += (1 + v * 0.4 - rate) * 0.1;
+      if (Math.abs(anim.playbackRate - rate) > 0.02) anim.playbackRate = rate;
     });
   });
 
@@ -255,10 +281,11 @@
 
   /* Generic reveals */
   const revealSel = ['.label', '.h2', '.manifesto__meta > div', '.stat', '.services__side .muted', '.svc', '.step', '.row', '.quotes__stage', '.vquote', '.xp__list li', '.xp__certs', '.faq__list details', '.cta__row', '.footer__row'];
-  $$(revealSel.join(',')).forEach(el => {
-    if (el.closest('.hero')) return;
-    el.setAttribute('data-reveal', '');
-    gsap.to(el, { opacity: 1, y: 0, duration: 1.2, ease: 'expo.out', scrollTrigger: { trigger: el, start: 'top 90%', once: true } });
+  const revealEls = $$(revealSel.join(',')).filter(el => !el.closest('.hero'));
+  revealEls.forEach(el => el.setAttribute('data-reveal', ''));
+  ScrollTrigger.batch(revealEls, {
+    start: 'top 90%', once: true,
+    onEnter: batch => gsap.to(batch, { opacity: 1, y: 0, duration: 1.2, ease: 'expo.out', stagger: 0.06, overwrite: true })
   });
 
   /* Horizontal project gallery (desktop) */
@@ -294,8 +321,13 @@
   gsap.from('.footer__big', { xPercent: -10, opacity: 0, ease: 'none', scrollTrigger: { trigger: '.footer', start: 'top bottom', end: 'bottom bottom', scrub: true } });
 
   /* Recalc after fonts/images */
-  addEventListener('load', () => ScrollTrigger.refresh());
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => ScrollTrigger.refresh());
+  /* One recalculation once web fonts are in (ScrollTrigger already refreshes on load by itself) */
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(() => {
+      const go = () => ScrollTrigger.refresh();
+      ('requestIdleCallback' in window) ? requestIdleCallback(go, { timeout: 1500 }) : setTimeout(go, 300);
+    });
+  }
 })();
 
 /* ===== Video testimonial ===== */
