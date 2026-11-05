@@ -199,7 +199,7 @@ const start = async () => {
   catch (e) { canvas && canvas.remove(); return; }
   init();
 };
-/* Phones: start on the first touch/scroll. Desktop: first mouse move, or 2.5 s after load. */
+/* Start the 3D on the visitor's first interaction (mouse move, touch, scroll or key) */
 let started = false;
 const go = () => {
   if (started) return;
@@ -210,7 +210,6 @@ const arm = () => {
   ['pointerdown', 'touchstart', 'wheel', 'keydown', 'scroll'].forEach(e => addEventListener(e, go, { once: true, passive: true }));
   if (!small) {
     addEventListener('pointermove', go, { once: true, passive: true });
-    setTimeout(go, 2500);
   }
 };
 if (canvas) {
